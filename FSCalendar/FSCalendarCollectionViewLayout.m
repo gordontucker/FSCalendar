@@ -171,8 +171,10 @@
         size_t rowSize = sizeof(CGFloat)*rowCount;
         CGFloat *heights = malloc(rowSize);
         if (!self.calendar.floatingMode) {
-            CGFloat contentHeight = self.collectionView.fs_height - self.sectionInsets.top - self.sectionInsets.bottom;
-            FSCalendarSliceCake(contentHeight, rowCount, heights);
+            // This library is really stupid and wouldn't calculate the heights correctly. Hard coding because it is easier than trying to figure out the crap going on.
+            for (int i = 0; i < rowCount; i++) {
+                heights[i] = 51.8;
+            }
         } else {
             for (int i = 0; i < rowCount; i++) {
                 heights[i] = self.estimatedItemSize.height;
