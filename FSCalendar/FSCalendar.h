@@ -502,7 +502,7 @@ IB_DESIGNABLE
  @param date A date is the calendar.
  */
 - (CGRect)frameForDate:(NSDate *)date;
-
+- (void)invalidateHeaders;
 /**
  An action selector for UIPanGestureRecognizer instance to control the scope transition
  
