@@ -100,7 +100,6 @@ typedef NS_ENUM(NSUInteger, FSCalendarOrientation) {
 
 - (void)invalidateDateTools;
 - (void)invalidateLayout;
-- (void)invalidateHeaders;
 - (void)invalidateAppearanceForCell:(FSCalendarCell *)cell forDate:(NSDate *)date;
 
 - (void)invalidateViewFrames;
